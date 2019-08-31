@@ -42,14 +42,14 @@
 </div>
 
 
-<header class="d-none fixed-top <?php if (  is_front_page() ) { echo " hp"; }?>" id="top"> <!--  sticky-top-->
+<header class="d-none fixed-top <?php if (  is_front_page() ) { echo " hp"; } else {echo "animated fadeInDown";} ?>" id="top"> <!--  sticky-top-->
 
-  <div class="container-fluid">
+  <div class="container-fluid" <?php if (  !is_front_page() ) { echo "style='margin-bottom: .5rem;'";} ?> >
     <div class="row">
-      <div class="<?php if (  is_front_page() ) { echo " col-md-4"; }?> col-6">
-       <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/img/logo<?php if (  is_front_page() ) { echo "-hp"; }?>.png" alt="Orhodontie Latresne"></a>
+      <div <?php if (is_front_page()) { echo "class='col-md-4 col-6'"; } else { echo "class='col-md-2 col-4' style='padding:0;' "; }?>>
+       <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('stylesheet_directory');?>/img/logo-hp<?php //if (  is_front_page() ) { echo "-hp"; }?>.png" alt="Orhodontie Latresne"></a>
      </div>
-     <div class="col-6 <?php if (  is_front_page() ) { echo "offset-md-2"; }?> docteurs">
+     <div class=" <?php if (  is_front_page() ) { echo "col-6 offset-md-2"; } else { echo "col-md-4 offset-md-6 offset-2 col-6";}?> docteurs">
        D<sup>r</sup> BAZERT Cédric<br>
        D<sup>r</sup> DUMÉ Bénédicte
      </div>
