@@ -221,8 +221,9 @@ $('.flip-container').css('height', hauteurronds);
 		$('html').css('overflow', 'auto'); 
 		//$('#capricci').removeClass('d-none');
 
-		$('#video2').hide();
-		$('#video3').hide();
+$('.video').not('#video1').hide();
+		//$('#video2').hide();
+		//$('#video3').hide();
 		$('.arrow-downjaune').hide();
 		$('.arrow-downrouge').hide();
 
@@ -303,9 +304,19 @@ console.log("ok");
   }
 );
 
+/*
+$('video').on('click', function (e) {
+    if (this.get(0).paused) {
+        this.get(0).play();
+    }
+    else {
+        this.get(0).pause();
+    }
+    e.preventDefault();
+});*/
 
 
-	
+
 
    } )( jQuery );
    
@@ -435,3 +446,8 @@ else{
 
 }
 
+/*
+
+function pauseVid() {
+    document.getElementById("#video1").pause();
+}*/
