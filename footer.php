@@ -69,14 +69,16 @@ Développement : <a href="https://madmind.fr" target="blank">Mathieu Dussault</a
 </div>
 
 
+<?php     if (  is_page( 'lorthodontie' ) ) { ?>
 
-<footer class="d-none">
-  <div class="container-fluid">
+
+<footer class="d-none inverse">
+  <div class="container-fluid inverse">
     <div class="row">
-      <div class="col-6">
+      <div class="col-sm-6">
         <img src="<?php bloginfo('stylesheet_directory');?>/img/logofooterblanc.png" alt="" />
       </div>
-      <div class="col-6 text-right">
+      <div class="col-sm-6 text-right">
         05 56 20 65 20 <br>
         contact@orthodontie-latresne.fr<br>
         2, rue augustinot 33360 Latresne<br>
@@ -87,7 +89,26 @@ Développement : <a href="https://madmind.fr" target="blank">Mathieu Dussault</a
 </footer>
 
 
+<?php   } else { ?>
 
+<footer class="d-none">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="<?php bloginfo('stylesheet_directory');?>/img/logofooterblanc.png" alt="" />
+      </div>
+      <div class="col-sm-6 text-right">
+        05 56 20 65 20 <br>
+        contact@orthodontie-latresne.fr<br>
+        2, rue augustinot 33360 Latresne<br>
+        <a href="javascript:$('.popup.credits').show();" class="liencredits">Crédit</a> | <a href="javascript:$('.popup.mentions').show();"  class="lienmentions">Mentions Légales</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<?php  } ?>
 
 <a href="#top" class="d-none"  id="backtotop" title="Retourner en haut de la page" style="display: block;"></a>
 

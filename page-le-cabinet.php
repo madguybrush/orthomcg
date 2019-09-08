@@ -18,7 +18,7 @@ get_header();
 
 
 
-<div style="text-align: center; " class="d-none" id="bienvenue">
+<div class="d-none text-center" id="bienvenue">
     <img src="<?php if (get_the_post_thumbnail_url()) { echo get_the_post_thumbnail_url(); } ?>" alt="le cabinet" style="max-width: 100%; margin: 1.5rem;padding: 1.5rem; width:200px;">
 </div>
 
@@ -62,7 +62,7 @@ $photo3 = $ligne3['photo3'];
 
     <div class="col-md-6 text-right ligne">
      <!-- <img src="image4hp.jpg" alt="" class="imagecabinet">-->
-      <img src="<?php bloginfo('stylesheet_directory');?>/img/cabinet2.jpg" alt="" class="imagecabinet">
+      <img src="<?php echo $photo2; ?>" alt="" class="imagecabinet">
     </div>
 
     <div class="col-md-6 ligne">
@@ -88,7 +88,7 @@ $photo3 = $ligne3['photo3'];
     </div>
 
       <div class="col-md-6 text-left ligne">
-         <img src="<?php bloginfo('stylesheet_directory');?>/img/cabinet3.jpg" alt="" class="imagecabinet">
+         <img src="<?php echo $photo3; ?>" alt="" class="imagecabinet">
       <!--<img src="image4hp.jpg" alt="" class="imagecabinet">-->
     </div>
 
